@@ -3950,10 +3950,10 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
           <script>
             document.getElementById('myForm').addEventListener('submit', async (e) => {
               e.preventDefault(); 
-              console.log("huaaaaaaaaaaaaaaaaaaaaa")
 
               let formData = new FormData(e.target);
-              
+              console.log("huaaaaaaaaaaaaaaaaaaaaa", formData)
+
               formData = JSON.stringify({
                 email: formData.get('sUserName'),
                 password: formData.get('sPassword')
