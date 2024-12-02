@@ -22,20 +22,21 @@
   document.getElementById('myForm').addEventListener('submit', async (e) => {
     e.preventDefault(); // Prevent default form submission
     const formData = new FormData(e.target);
+    console.log(formData)
 
-    const response = await fetch('/api/user', {
-      method: 'POST',
-      body: JSON.stringify({
-        username: formData.get('sUserName'),
-        password: formData.get('sPassword')
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+    // const response = await fetch('/api/user', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     username: formData.get('sUserName'),
+    //     password: formData.get('sPassword')
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // });
 
-    const result = await response.json();
-    console.log('Server Response:', result);
+    // const result = await response.json();
+    // console.log('Server Response:', result);
   });
 </script>
 
