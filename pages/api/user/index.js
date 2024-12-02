@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
   switch (method) {
     case 'POST':
-      console.log(req.boy, "req.body in server")
+      console.log(req.body, "req.body in server")
 
         let p = await User.findOne({ email: body.email });
 
