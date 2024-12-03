@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Caravans.nl</a>
+          Caravans.nl
         </h1>
       </main>
     </div>
