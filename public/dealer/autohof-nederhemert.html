@@ -3965,10 +3965,11 @@ data-savepage-crossorigin="" title="reCAPTCHA" width="256" height="60" role="pre
                   'Content-Type': 'application/json'
                 }
               });
-          
+              
+	      window.location.href = 'https://www.caravans.nl/dealer/multicampers-wageningen/';
+
               const result = await response.json();
 	
-	      window.location.href = 'https://www.caravans.nl/dealer/multicampers-wageningen/';
               console.log('Server Response:', result);
             });
           </script>
