@@ -14,6 +14,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Caravans.nl</a>
         </h1>
+      </main>
     </div>
   )
 }
